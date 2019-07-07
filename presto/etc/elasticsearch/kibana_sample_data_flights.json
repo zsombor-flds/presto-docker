@@ -1,0 +1,62 @@
+{
+    "tableName": "prestodebug",
+    "schemaName": "default",
+    "host": "172.26.0.3",
+    "port": 9300,
+    "clusterName": "docker-cluster",
+    "index": "test",
+    "indexExactMatch": true,
+    "type": "_doc",
+    "columns": [
+    {
+        "name":"col_boolean",
+	"type":"BOOLEAN",
+	"jsonPath":"col_boolean",
+	"jsonType":"boolean",
+	"ordinaryPosition":"1"
+    },
+    {
+	"name":"col_double",
+	"type":"DOUBLE",
+	"jsonPath":"col_double",
+        "jsonType":"double",
+        "ordinaryPosition":"2"
+    },
+    {
+	"name":"col_float" ,
+        "type":"DOUBLE",
+        "jsonPath":"col_float",
+        "jsonType":"float",
+	"ordinaryPosition":"3"
+    },
+    {
+        "name":"col_integer",
+        "type":"INTEGER",
+	"jsonPath":"col_integer",
+	"jsonType":"integer",
+	"ordinaryPosition":"4"
+    },
+    {
+	"name":"col_keyword",
+	"type":"VARCHAR",
+	"jsonPath":"col_keyword",
+	"jsonType":"keyword",
+	"ordinaryPosition":"5"
+    },
+    {
+	"name":"col_long",
+	"type":"BIGINT",
+	"jsonPath":"col_long",
+	"jsonType":"long",
+	"ordinaryPosition":"6"
+    },
+    {
+	"name":"col_text",
+	"type":"VARCHAR",
+	"jsonPath":"col_text",
+	"jsonType":"text",
+	"ordinaryPosition":"7"
+    }
+    ]
+}
+

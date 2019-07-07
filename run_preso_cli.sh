@@ -1,0 +1,1 @@
+sudo docker exet -it <your_running_presto_container_id> ./presto

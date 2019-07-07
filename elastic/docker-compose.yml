@@ -1,0 +1,52 @@
+version: '2.2'
+services:
+  elasticsearch:
+    build:
+      context: elasticsearch/
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      # - transport.tcp.host="0.0.0.0"
+      # - client.transport.sniff= true
+      - transport.tcp.port=9300  
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks:
+      - esnet
+    
+  kibana:
+    build:
+      context: kibana/
+    volumes:
+      - ./kibana/config/:/usr/share/kibana/config:ro
+    ports:
+      - 5601:5601
+    environment: 
+      - SERVER_HOST=0.0.0.0
+    networks:
+      - esnet
+
+  # grafana:
+  #   build:
+  #     context: grafana/
+  #   ports:
+  #     - 3000:3000
+  #   volumes:
+  #     - ./grafana/config:/var/lib/grafana
+  # logstash:
+  #   build:
+  #     context: logstash/
+  #   volumes:
+  #     - ./logstash/config/:/usr/share/logstash/pipeline
+  #   networks:
+  #     - esnet
+    
+volumes:
+  esdata1:
+    driver: local
+
+networks:
+  esnet:
+    driver: bridge

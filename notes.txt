@@ -1,0 +1,2 @@
+ISSUE: 
+Jelenleg csak akkor tud kiolvasni elastic-ból, ha ugyan azon a docker networkön vannak
