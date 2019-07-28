@@ -1,0 +1,1 @@
+./presto-server-0.221/bin/launcher start && ./presto

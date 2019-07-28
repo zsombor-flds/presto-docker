@@ -1,5 +1,5 @@
 # Pull base image.
-MAINTAINER Foldesi Zsombor 
+# MAINTAINER Foldesi Zsombor 
 FROM ubuntu
 
 # Install pre requeirements.
