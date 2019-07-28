@@ -37,8 +37,13 @@ RUN wget https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.221/pre
 
 
 WORKDIR /opt
-# COPY /home/pseu/Documents/presto_test/etc/ /opt/presto-server-0.221/etc
-# RUN ./presto-server-0.221/bin/launcher run
-# CMD ["./presto"]
+COPY ./presto/presto_init.sh ./presto_init.sh
 
+# CMD ["./presto-server-0.221/bin/launcher", "start"]
+# ENTRYPOINT ["bash alma.sh"]
+# RUN bash
+# VOLUME [ "./presto/etc:/opt/presto-server-0.211/etc" ]
+# CMD ["bash -c ./presto-server-0.221/bin/launcher run && sleep 5 && tail -F /dev/null"]
+# CMD ["./presto"]
+# CMD [ "bash" ]
 # CMD ["/presto-server-0.221/bin/launcher run "]
