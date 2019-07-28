@@ -1,4 +1,5 @@
 # Pull base image.
+MAINTAINER Foldesi Zsombor 
 FROM ubuntu
 
 # Install pre requeirements.
@@ -32,18 +33,5 @@ RUN wget https://repo1.maven.org/maven2/com/facebook/presto/presto-server/0.221/
 RUN wget https://repo1.maven.org/maven2/com/facebook/presto/presto-cli/0.221/presto-cli-0.221-executable.jar \
   && mv presto-cli-0.221-executable.jar /opt/presto \
   && chmod +x opt/presto
-  # && chmod +x presto
-# Define default command.
-
-
 WORKDIR /opt
 COPY ./presto/presto_init.sh ./presto_init.sh
-
-# CMD ["./presto-server-0.221/bin/launcher", "start"]
-# ENTRYPOINT ["bash alma.sh"]
-# RUN bash
-# VOLUME [ "./presto/etc:/opt/presto-server-0.211/etc" ]
-# CMD ["bash -c ./presto-server-0.221/bin/launcher run && sleep 5 && tail -F /dev/null"]
-# CMD ["./presto"]
-# CMD [ "bash" ]
-# CMD ["/presto-server-0.221/bin/launcher run "]
