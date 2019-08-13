@@ -1,1 +1,1 @@
-sudo docker build -t zsfoldesi/presto:0.1 .
+docker build -t foldesizsombor/presto_docker:01 .

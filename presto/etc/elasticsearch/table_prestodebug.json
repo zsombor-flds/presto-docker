@@ -1,7 +1,7 @@
 {
     "tableName": "prestodebug",
     "schemaName": "default",
-    "host": "172.26.0.3",
+    "host": "172.22.0.2",
     "port": 9300,
     "clusterName": "docker-cluster",
     "index": "test",
@@ -9,7 +9,7 @@
     "type": "_doc",
     "columns": [
     {
-        "name":"col_boolean",
+    "name":"col_boolean",
 	"type":"BOOLEAN",
 	"jsonPath":"col_boolean",
 	"jsonType":"boolean",

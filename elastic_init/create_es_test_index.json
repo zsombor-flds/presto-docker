@@ -1,0 +1,22 @@
+PUT test
+{
+    "settings" : {
+        "number_of_shards" : 1
+    },
+    "mappings" : {
+        "_doc" : {
+            "properties" : {
+               "col_binary" : { "type" : "binary" },
+                "col_boolean" : { "type" : "boolean" },
+                "col_double" : { "type" : "double" },
+                "col_float" : { "type" : "float" },
+                "col_integer" : { "type" : "integer" },
+                "col_keyword" : { "type" : "keyword" },
+                "col_long": {"type" : "long"},
+                "col_text" : { "type" : "text" }
+            }
+        }
+    }
+}
+
+GET test/_mapping
