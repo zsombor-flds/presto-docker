@@ -23,13 +23,15 @@ services:
       - 5601:5601
     environment: 
       - SERVER_HOST=0.0.0.0
-  # grafana:
-  #   build:
-  #     context: grafana/
-  #   ports:
-  #     - 3000:3000
-  #   volumes:
-  #     - ./grafana/config:/var/lib/grafana
+  grafana:
+    build:
+      context: grafana/
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana/config:/var/lib/grafana
+    user: "104"
+
   # logstash:
   #   build:
   #     context: logstash/
